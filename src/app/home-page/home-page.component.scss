@@ -1,0 +1,66 @@
+.page-background {
+  background-image: url("/assets/images/background.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: full;
+  width: 100%;
+  background-color: #F8F8F8;
+  padding-top: 141px;
+
+  .intro {
+      background-color: white;
+      width: 50%;
+      box-shadow: 0px 3px 6px #00000029;
+      opacity: 1;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      margin: auto;
+
+      .col-sm {
+          text-align: center;
+          padding-top: 62px;
+          padding-bottom: 30px;
+      }
+
+      .blue-text {
+          color: #1C4872;
+          font-size: 24px;
+          font-style: "Monsterrat";
+          text-align: center;
+          padding-bottom: 14px;
+          padding-top: 31px;
+      }
+
+      .black-text {
+          color: #000000;
+          font-style: "OpenSans";
+          text-align: center;
+          font-size: 14px;
+          padding-bottom: 41px;
+      }
+
+      .col-sm {
+          padding-top: 20px;
+          text-align: center;
+      }
+
+      .image-container {
+          padding-bottom: 30px;
+          margin: auto;
+          text-align: center;
+      }
+
+      .button {
+          margin: auto;
+          color: white;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 1.53px;
+          width: 220px;
+          height: 50px;
+          font-family: "OpenSans";
+          font-size: 14px;
+          background-color: #1C4872;
+          border-width: 0px;
+      }
+  }
+}

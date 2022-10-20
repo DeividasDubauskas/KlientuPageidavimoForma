@@ -1,0 +1,118 @@
+.section {
+  .row {
+    padding-top: 45px;
+    padding-bottom: 35px;
+    .blue-text {
+      color: #1c4872;
+      font-size: 24px;
+      font-style: "Monsterrat";
+      text-align: center;
+    }
+
+    .black-text {
+      color: black;
+      font-style: "OpenSans";
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+
+    .container {
+      padding-top: 35px;
+      padding-bottom: 60px;
+      .col-xs-12 {
+        .star {
+          color: red;
+        }
+
+        .black-field_text {
+          color: black;
+          font-size: 14px;
+          font-style: "OpenSans";
+          font-weight: bold;
+          padding-bottom: 10px;
+          padding-top: 10px;
+        }
+
+        .hint {
+          font-size: 10px;
+          color: gray;
+          font-style: "OpenSans";
+        }
+      }
+    }
+
+
+  .btn-primary {
+    --bs-btn-bg: white;
+    color: #1c4872;
+    border-width: 1px;
+    border-color: #1c4872;
+    border-radius: 0px;
+    font: 12px "OpenSans";
+    width: 50%;
+    letter-spacing: 1.31px;
+    height: 50px;
+
+    .chevron-left-icon1 {
+      color: #ebf0f3;
+      height: 15px;
+    }
+
+    .chevron-left-icon2 {
+      color: #ebf0f3;
+      margin-left: -10px;
+      height: 15px;
+    }
+  }
+}
+
+// .col-sm {
+//   text-align: center;
+//   padding-top: 30px;
+
+//   .btn-primary {
+//     --bs-btn-bg: white;
+//     color: #1c4872;
+//     border-width: 1px;
+//     border-color: #1c4872;
+//     border-radius: 0px;
+//     font: 12px "OpenSans";
+//     width: 50%;
+//     letter-spacing: 1.31px;
+//     height: 50px;
+
+//     .chevron-left-icon1 {
+//       color: #ebf0f3;
+//       height: 15px;
+//     }
+
+//     .chevron-left-icon2 {
+//       color: #ebf0f3;
+//       margin-left: -10px;
+//       height: 15px;
+//     }
+//   }
+
+//   .btn-secondary {
+//     --bs-btn-bg: #1c4872;
+//     font: 12px "OpenSans";
+//     border-width: 1px;
+//     border-color: #1c4872;
+//     border-radius: 0px;
+//     width: 50%;
+//     letter-spacing: 1.31px;
+//     height: 50px;
+
+//     .chevron-right-icon1 {
+//       color: #ebf0f3;
+//       height: 15px;
+//     }
+
+//     .chevron-right-icon2 {
+//       color: #ebf0f3;
+//       margin-left: -10px;
+//       height: 15px;
+//     }
+//   }
+// }

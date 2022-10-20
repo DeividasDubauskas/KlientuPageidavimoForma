@@ -1,0 +1,74 @@
+.page-background {
+  background-image: url("/assets/images/background.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: full;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding-top: 74px;
+
+  .logo {
+    text-align: center;
+    padding-bottom: 48px;
+  }
+
+  .container {
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 32px;
+
+
+    .col-sm {
+      text-align: center;
+      padding-top: 30px;
+
+      .btn-primary {
+        --bs-btn-bg: white;
+        color: #1c4872;
+        border-width: 1px;
+        border-color: #1c4872;
+        border-radius: 0px;
+        font: 12px "OpenSans";
+        width: 50%;
+        letter-spacing: 1.31px;
+        height: 50px;
+
+        .chevron-left-icon1 {
+          color: #ebf0f3;
+          height: 15px;
+        }
+
+        .chevron-left-icon2 {
+          color: #ebf0f3;
+          margin-left: -10px;
+          height: 15px;
+        }
+      }
+
+      .btn-secondary {
+        --bs-btn-bg: #1c4872;
+        font: 12px "OpenSans";
+        border-width: 1px;
+        border-color: #1c4872;
+        border-radius: 0px;
+        width: 50%;
+        letter-spacing: 1.31px;
+        height: 50px;
+
+        .chevron-right-icon1 {
+          color: #ebf0f3;
+          height: 15px;
+        }
+
+        .chevron-right-icon2 {
+          color: #ebf0f3;
+          margin-left: -10px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}

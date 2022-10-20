@@ -1,0 +1,37 @@
+<div class="page-background">
+  <div class="logo">
+    <img src="assets/images/itmalogo.png" class="img-fluid" />
+  </div>
+  <div class="container">
+    <mat-stepper linear #stepper>
+      <mat-step>
+        <ng-template matStepLabel>Kontaktai</ng-template>
+        <app-contact-information></app-contact-information>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Pageidavimai</ng-template>
+        <app-wishes></app-wishes>
+        <div>
+          <button mat-button matStepperPrevious>Kontaktai</button>
+          <button mat-button matStepperNext>Papildomai</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Papildomai</ng-template>
+        <app-comments></app-comments>
+        <div>
+          <button mat-button matStepperPrevious>Papildomai</button>
+          <button mat-button matStepperNext>Peržiūra</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Peržiūra</ng-template>
+        <app-review></app-review>
+        <div>
+          <button mat-button matStepperPrevious>Papildomai</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
