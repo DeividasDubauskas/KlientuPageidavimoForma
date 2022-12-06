@@ -4,7 +4,7 @@
     <h2 class="black-text">Šiame lange galite suvesti visus norimus įregistruoti pageidavimus ką nors atnaujinti.</h2>
   </div>
   <hr/>
-  <div class="container">
+  <div class="container form">
     <form [formGroup]="wishForm">
       <div formArrayName="wish">
         <div *ngFor="let wishGroup of wish?.controls; let i = index"[formGroupName]="i">
@@ -69,7 +69,7 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container buttons">
   <button class="btn btn-primary" mat-button matStepperPrevious>
     <img class="chevron-left-icon" src="assets\images\Back(first).svg">
     <img class="chevron-left-icon" src="assets\images\Back(second).svg">

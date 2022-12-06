@@ -15,7 +15,7 @@
       font-size: 14px;
     }
   }
-  .container {
+  .container.form {
     .row {
       .col-8 {
         .blue-text {
@@ -97,7 +97,7 @@
   }
 }
 
-.container {
+.container.buttons {
   padding-top: 20px;
   .btn-primary {
     --bs-btn-bg: white;
@@ -151,7 +151,7 @@
         font-size: 10px;
       }
     }
-    .container {
+    .container.form {
       padding-top: 10px;
       padding-bottom: 10px;
       .row {
@@ -226,7 +226,7 @@
       }
     }
   }
-  .container {
+  .container.buttons {
     --bs-gutter-x: 0rem;
     padding-right: calc(var(--bs-gutter-x) * 0);
     padding-left: calc(var(--bs-gutter-x) * 0);
