@@ -1,0 +1,84 @@
+<div class="section">
+  <div class="row">
+    <h1 class="blue-text">Pageidavimai atnaujinti</h1>
+    <h2 class="black-text">Šiame lange galite suvesti visus norimus įregistruoti pageidavimus ką nors atnaujinti.</h2>
+  </div>
+  <hr/>
+  <div class="container">
+    <form [formGroup]="wishForm">
+      <div formArrayName="wish">
+        <div *ngFor="let wishGroup of wish?.controls; let i = index"[formGroupName]="i">
+          <div class="row">
+            <div class="col-8">
+              <h2 class="blue-text">Pageidavimas nr. {{i + 1}} </h2>
+            </div>
+            <div class="col-4">
+              <button class="delete-wish" (click)="removeWish(i)"><img src="assets\images\DeleteWish.svg"></button>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <label class="black-field_text">Trumpas užduoties aprašymas: <b class="star">*</b></label>
+            <div class="input-group flex-nowrap">
+              <input type="text"
+              class="form-control" aria-label="shortDescription" id="shortDescription" formControlName="shortDescription" aria-describedby="addon-wrapping">
+            </div>
+            <p class="hint">Labai trumpas užduoties aprašymas.</p>
+          </div>
+          <div class="col-xs-12">
+            <label class="black-field_text">Išsamus užduoties aprašymas ar papildoma informacija:</label>
+            <div class="input-group flex-nowrap">
+              <input type="text" class="form-control" aria-label="longDescription" id="longDescription" formControlName="longDescription" aria-describedby="addon-wrapping">
+            </div>
+            <p class="hint">Jeigu reikia galite suteikti daugiau informcijos apie užduotį.</p>
+          </div>
+          <div class="col-xs-12">
+            <label class="black-field_text">Atlikimo terminas:</label>
+            <div class="input-group flex-nowrap">
+              <input type="text" class="form-control" aria-label="date" id="date" formControlName="date" aria-describedby="addon-wrapping">
+            </div>
+            <p class="hint">Jeigu užduotį būtina atlikti iki tam tikro meto, galite nurodyti datą.</p>
+          </div>
+          <div class="col-xs-12">
+            <label class="black-field_text">Internetinio tinklapio nuoroda:</label>
+            <div class="input-group flex-nowrap">
+              <input type="text" class="form-control" aria-label="url" id="url" formControlName="url" aria-describedby="addon-wrapping">
+            </div>
+            <p class="hint">Jeigu žinote konkretų tinklapio adresą, kuriame nutiko klaida ar reikia kažką atlikti, galite nurodyti čia.</p>
+          </div>
+          <div class="col-xs-12">
+            <label class="black-field_text">Failo(-ų) pridėjimas:</label>
+            <div class="file-input">
+              <label for="image">
+                <span class="hint">Paspauskite ant šio laukelio arba nutempkite failus bet kur į punktyru pažymėtą zoną.</span>
+                <input class="input" type="file" id="image" formControlName="image" #filePicker (change)="onFileUpload($event)">
+              </label>
+              <div class="image-preview" *ngIf="imagePreview">
+                <img src="assets\images\FilePicture.svg" [alt]="wishForm.value.image">
+              </div>
+            </div>
+            <p class="hint">Galite prisegti papildomą informaciją, tokią kaip paveiksliukai, tekstiniai dokumentai ar kita.</p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </form>
+    <br>
+    <div class="block">
+      <button class="button" (click)="addWish()" (click)="onSubmit()"> <img src="assets\images\Button(plus).png"/></button>
+      <p class="btn-text">Pridėti naują</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <button class="btn btn-primary" mat-button matStepperPrevious>
+    <img class="chevron-left-icon" src="assets\images\Back(first).svg">
+    <img class="chevron-left-icon" src="assets\images\Back(second).svg">
+    <img class="chevron-left-icon" src="assets\images\Back(third).svg">
+    Kontaktai
+  </button>
+  <button mat-button matStepperNext class="btn btn-secondary" type="button" (click)="onSubmit()" >Papildomai
+    <img class="chevron-right-icon" src="assets\images\Next(first).svg">
+    <img class="chevron-right-icon" src="assets\images\Next(second).svg">
+    <img class="chevron-right-icon" src="assets\images\Next(third).svg">
+  </button>
+</div>

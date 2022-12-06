@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackComponent } from './back.component';
+import { FinalComponent } from './final.component';
 
-describe('BackComponent', () => {
-  let component: BackComponent;
-  let fixture: ComponentFixture<BackComponent>;
+describe('FinalComponent', () => {
+  let component: FinalComponent;
+  let fixture: ComponentFixture<FinalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackComponent ]
+      declarations: [ FinalComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BackComponent);
+    fixture = TestBed.createComponent(FinalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

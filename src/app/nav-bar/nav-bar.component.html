@@ -1,37 +1,35 @@
 <div class="page-background">
   <div class="logo">
-    <img src="assets/images/itmalogo.png" class="img-fluid" />
+    <img src="assets/images/itmalogo.png"/>
   </div>
-  <div class="container">
+  <div class="container form">
     <mat-stepper linear #stepper>
       <mat-step>
         <ng-template matStepLabel>Kontaktai</ng-template>
         <app-contact-information></app-contact-information>
       </mat-step>
       <mat-step>
-        <ng-template matStepLabel>Pageidavimai</ng-template>
-        <app-wishes></app-wishes>
-        <div>
-          <button mat-button matStepperPrevious>Kontaktai</button>
-          <button mat-button matStepperNext>Papildomai</button>
-        </div>
+        <ng-template matStepLabel >Pageidavimai</ng-template>
+        <app-wishes-form></app-wishes-form>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Papildomai</ng-template>
         <app-comments></app-comments>
-        <div>
-          <button mat-button matStepperPrevious>Papildomai</button>
-          <button mat-button matStepperNext>Peržiūra</button>
-        </div>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Peržiūra</ng-template>
         <app-review></app-review>
         <div>
-          <button mat-button matStepperPrevious>Papildomai</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button class="btn btn-primary" mat-button matStepperPrevious>
+            <img class="chevron-left-icon" src="assets\images\Back(first).svg">
+            <img class="chevron-left-icon" src="assets\images\Back(second).svg">
+            <img class="chevron-left-icon" src="assets\images\Back(third).svg">
+            Papildomai
+          </button>
+          <button mat-button routerLink="/final" class="btn btn-secondary" type="button">Pateikti
+            <img class="chevron-right-icon" src="assets\images\FinalPage.svg">
+          </button>
         </div>
       </mat-step>
     </mat-stepper>
   </div>
-</div>

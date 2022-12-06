@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { CommentModel } from 'src/app/comments/models/comment.model';
+import { Subject } from 'rxjs';
 import { ContactModel } from 'src/app/contact-information/models/contact.model';
+import { WishModel } from 'src/app/wishes/models/wish.model';
 import { BugRegistrar } from '../models/bug-registrar.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BugRegistrarService {
-  formValues!: BugRegistrar;
+  formValues =  new BugRegistrar();
   private bugSubject = new Subject<BugRegistrar>();
   bugSubjectObservable = this.bugSubject.asObservable();
   constructor() { }
@@ -17,22 +17,22 @@ export class BugRegistrarService {
     return this.formValues;
   }
 
-  setComment(comments: CommentModel){
+  setComment(comments: string | null | undefined){
     console.log(comments);
-
-    this.formValues.comments?.push(comments);
+    this.formValues.comments = comments;
   }
 
   setContactInformation(contacts: ContactModel){
     console.log(contacts);
+    this.formValues.contacts = contacts;
+  }
 
-    this.formValues.contacts?.push(contacts);
-    this.updateCurrentForm();
+  setWishesInformation(wish: WishModel[]){
+    console.log(wish);
+    this.formValues.wish = wish;
   }
 
   updateCurrentForm(){
-    console.log('hit');
     this.bugSubject.next(this.formValues);
   }
-
 }

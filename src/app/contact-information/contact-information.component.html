@@ -1,106 +1,56 @@
 <div class="section">
   <div class="row">
-    <h1 class="blue-text">
-      <b>Kontaktinė informacija</b>
-    </h1>
-    <h2 class="black-text">
-      Pateikite savo kontaktinę informaciją, kad galėtume žinoti kas registruoja
-      atnaujinimus :)
-   </h2>
+    <h1 class="blue-text">Kontaktinė informacija</h1>
+    <h2 class="black-text">Pateikite savo kontaktinę informaciją, kad galėtume žinoti kas registruoja atnaujinimus :)</h2>
   </div>
-  <hr />
-  <div class="container">
+  <hr/>
+  <div class="container form">
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="col-xs-12">
-        <mat-form-field class="form-element">
-          <label for="exampleFormControlInput1" class="black-field_text">Vardas, pavardė: <b class="star">*</b></label>
-          <input
-            matInput
-            type="text"
-            id="fullName"
-            formControlName="fullName"
-          />
-        </mat-form-field>
-        <p class="hint">Įveskite savo vardą ir pavardę</p>
-        <div *ngIf="f['fullName'].touched && f['fullName'].invalid" class="alert alert-danger">
-          <div *ngIf="f['fullName'].errors && f['fullName'].errors['required']">Vardas ir pavardė turi būti įvesta</div>
-          <div *ngIf="f['fullName'].errors && f['fullName'].errors['minlength']">Per mažai simbolių</div>
+        <label class="black-field-text" [ngClass]="{'text-danger': f.fullName.touched && f.fullName.errors}">Vardas, pavardė: <b class="star">*</b></label>
+        <div class="input-group flex-nowrap">
+          <input type="text" [ngClass]="{ 'is-invalid': f.fullName.touched && f.fullName.errors, 'is-valid': f.fullName.valid }"
+          class="form-control" aria-label="fullName" id="fullName" formControlName="fullName" aria-describedby="addon-wrapping">
         </div>
+        <p class="hint" [ngClass]="{'text-danger': f.fullName.touched && f.fullName.errors}">Įveskite savo vardą ir pavardę</p>
       </div>
       <div class="col-xs-12">
-        <mat-form-field class="form-element">
-          <label for="exampleFormControlInput1" class="black-field_text">El. pašto adresas: <b class="star">*</b></label>
-          <input
-            matInput
-            type="text"
-            id="email"
-            formControlName="email"
-          />
-        </mat-form-field>
-        <p class="hint">Įveskite el. pašto adresą kuriuo prireikus galėsime susisiekti</p>
-        <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
-          <div *ngIf="f['email'].errors && f['email'].errors['required']">El. pašto adresas turi būti įvestas</div>
-          <div *ngIf="f['email'].errors && f['email'].errors['pattern']">Galiojantis el. pašto adresas turi būti įvestas</div>
+        <label class="black-field-text" [ngClass]="{'text-danger': f.email.touched && f.email.errors}">El. pašto adresas: <b class="star">*</b></label>
+        <div class="input-group flex-nowrap">
+          <input type="text" [ngClass]="{ 'is-invalid': f.email.touched && f.email.errors, 'is-valid': f.email.valid }"
+          class="form-control" aria-label="email" id="email" formControlName="email" aria-describedby="addon-wrapping">
         </div>
+        <p class="hint" [ngClass]="{'text-danger': f.email.touched && f.email.errors}">Įveskite el. pašto adresą kuriuo prireikus galėsime susisiekti</p>
       </div>
       <div class="col-xs-12">
-        <mat-form-field class="form-element">
-          <label for="exampleFormControlInput1" class="black-field_text">Telefono numeris: <b class="star">*</b></label>
-          <input
-           matInput
-            type="text"
-            id="phone"
-            formControlName="phone"
-          />
-        </mat-form-field>
-        <p class="hint">Įveskite telefono numerį kuriuo prireikus galėsime susisiekti</p>
-        <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">
-          <div *ngIf="f['phone'].errors && f['phone'].errors['required']">Telefono numeris turi būti įvestas</div>
-          <div *ngIf="f['phone'].errors && f['phone'].errors['minlength']">Per mažai skaičių (+37061234567)</div>
-          <div *ngIf="f['phone'].errors && f['phone'].errors['maxlength']">Per daug skaičių (+37061234567)</div>
+        <label class="black-field-text" [ngClass]="{'text-danger': f.phone.touched && f.phone.errors}">Telefono numeris: <b class="star">*</b></label>
+        <div class="input-group flex-nowrap">
+          <input type="text" [ngClass]="{ 'is-invalid': f.phone.touched && f.phone.errors, 'is-valid': f.phone.valid }"
+          class="form-control" aria-label="phone" id="phone" formControlName="phone" aria-describedby="addon-wrapping">
         </div>
+        <p class="hint" [ngClass]="{'text-danger': f.phone.touched && f.phone.errors}">Įveskite telefono numerį kuriuo prireikus galėsime susisiekti</p>
       </div>
       <div class="col-xs-12">
-        <mat-form-field class="form-element">
-          <label for="exampleFormControlInput1" class="black-field_text">Projektas: <b class="star">*</b></label>
-          <input
-            matInput
-            type="text"
-            id="projectTitle"
-            formControlName="projectTitle"
-          />
-        </mat-form-field>
-        <p class="hint">Kokį Jūsų projektą mes vykdome?</p>
-        <div *ngIf="f['projectTitle'].touched && f['projectTitle'].invalid" class="alert alert-danger">
-          <div *ngIf="f['projectTitle'].errors && f['projectTitle'].errors['required']">Projekto pavadinimas turi būti įvestas</div>
-          <div *ngIf="f['projectTitle'].errors && f['projectTitle'].errors['minlength']">Per mažai simbolių</div>
+        <label class="black-field-text" [ngClass]="{'text-danger': f.projectTitle.touched && f.projectTitle.errors}">Projektas: <b class="star">*</b></label>
+        <div class="input-group flex-nowrap">
+          <input type="text" [ngClass]="{ 'is-invalid': f.projectTitle.touched && f.projectTitle.errors, 'is-valid': f.projectTitle.valid }"
+          class="form-control" aria-label="projectTitle" id="projectTitle" formControlName="projectTitle" aria-describedby="addon-wrapping">
         </div>
+        <p class="hint" [ngClass]="{'text-danger': f.projectTitle.touched && f.projectTitle.errors}">Kokį Jūsų projektą mes vykdome?</p>
       </div>
-      {{contactForm.value | json}}
     </form>
   </div>
+</div>
+<div class="container buttons">
   <button class="btn btn-primary" type="button" routerLink="/">
-    <img class="chevron-left-icon1" src="assets\images\chevron-left.svg" />
-    <img class="chevron-left-icon2" src="assets\images\chevron-left.svg" />
-    <img class="chevron-left-icon2" src="assets\images\chevron-left.svg" />
+    <img class="chevron-left-icon" src="assets\images\Back(first).svg">
+    <img class="chevron-left-icon" src="assets\images\Back(second).svg">
+    <img class="chevron-left-icon" src="assets\images\Back(third).svg">
     Pradžia
   </button>
-  <app-forward></app-forward>
-  <!-- <div class="col-sm">
-          <div class="d-grid gap-2 d-md-block">
-              <button class="btn btn-primary" type="button" routerLink="/">
-                  <img class="chevron-left-icon1" src="assets\images\chevron-left.svg">
-                  <img class="chevron-left-icon2" src="assets\images\chevron-left.svg">
-                  <img class="chevron-left-icon2" src="assets\images\chevron-left.svg">
-
-                  Pradžia</button>
-              <button class="btn btn-secondary" type="button" routerLink="/wishes">Pageidavimai
-                  <img class="chevron-right-icon1" src="assets\images\chevron-right.svg">
-                  <img class="chevron-right-icon2" src="assets\images\chevron-right.svg">
-                  <img class="chevron-right-icon2" src="assets\images\chevron-right.svg">
-              </button>
-          </div>
-      </div> -->
-  <!-- </div>
-</div> -->
+  <button mat-button matStepperNext class="btn btn-secondary" type="button" (click)="onSubmit()" >Pageidavimai
+    <img class="chevron-right-icon" src="assets\images\Next(first).svg">
+    <img class="chevron-right-icon" src="assets\images\Next(second).svg">
+    <img class="chevron-right-icon" src="assets\images\Next(third).svg">
+  </button>
 </div>

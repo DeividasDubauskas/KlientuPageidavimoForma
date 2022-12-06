@@ -20,8 +20,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ForwardComponent } from './shared/buttons/forward.component';
-import { BackComponent } from './shared/buttons/back.component';
+import { FinalComponent } from './final/final.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WishesFormComponent } from './wishes/wishes-form/wishes-form.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent, pathMatch: 'full' },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'comments', component: CommentsComponent, pathMatch: 'full' },
   { path: 'review', component: ReviewComponent, pathMatch: 'full' },
   { path: 'nav-bar', component: NavBarComponent, pathMatch: 'full' },
+  { path: 'final', component: FinalComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -41,8 +43,8 @@ const routes: Routes = [
     WishesComponent,
     CommentsComponent,
     ReviewComponent,
-    ForwardComponent,
-    BackComponent,
+    FinalComponent,
+    WishesFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { BugRegistrarService } from '../nav-bar/service/bug-registrar.service';
 import { CommentModel } from './models/comment.model';
@@ -6,8 +6,13 @@ import { CommentModel } from './models/comment.model';
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
-  styleUrls: ['./comments.component.scss']
+  styleUrls: ['./comments.component.scss'],
 })
+
+@Injectable({
+  providedIn:'root'
+})
+
 export class CommentsComponent implements OnInit {
 
   commentForm = new FormGroup({
@@ -15,21 +20,13 @@ export class CommentsComponent implements OnInit {
   });
 
   constructor(private bugService: BugRegistrarService) { }
-  ngOnInit(): void {
 
-  }
+  ngOnInit(): void { }
 
-  // setComment(comments: CommentModel){
-  //   this.bugService.setComment(comments);
-  // }
 
   onSubmit(){
-    console.log(this.commentForm);
-    let comments: CommentModel={
-      comment: this.commentForm.value.comment
-    }
-
-    this.bugService.setComment(comments);
+    this.bugService.setComment(this.commentForm.value.comment);
+    this.bugService.updateCurrentForm();
   }
 
 }

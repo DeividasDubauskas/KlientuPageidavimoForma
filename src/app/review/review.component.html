@@ -1,27 +1,71 @@
-<p>review works!</p>
-<div class="container">
-  {{contacts | json}}
-  <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="fullName">
-      <th mat-header-cell *matHeaderCellDef>Vardas, Pavarde</th>
-      <td mat-cell *matCellDef="let contact">{{ contact }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef>Pastas</th>
-      <td mat-cell *matCellDef="let contact">{{ contact | json }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="phone">
-      <th mat-header-cell *matHeaderCellDef>Telefono numeris</th>
-      <td mat-cell *matCellDef="let contact">{{ contact | json  }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="projectTitle">
-      <th mat-header-cell *matHeaderCellDef>Projekto pavadinimas</th>
-      <td mat-cell *matCellDef="let contact">{{ contact | json  }}</td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table> -->
+<div class="section">
+  <div class="row">
+    <h1 class="blue-text"><b>Peržiūra</b></h1>
+    <h2 class="black-text">Čia galite peržiūrėti Jūsų suvestą informaciją ir pateikti jei viskas gerai.</h2>
+    <hr />
+    <div class="row">
+      <h1 class="blue-text1"><b>Kontaktinė informacija</b></h1>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Vardas, pavardė:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.contacts?.fullName || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">El. pašto adresas:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.contacts?.email || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Telefono numeris:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.contacts?.phone || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Projektas:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.contacts?.projectTitle || '-' }}</p>
+    </div>
+  </div>
+  <div class="row" *ngFor="let a of model.wish; let i = index">
+    <h1 class="blue-text1">Pageidavimas nr. {{ i + 1 }}</h1>
+    <div class="col-lg-4">
+      <p class="black-text1">Trumpas aprašymas:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.wish[i].shortDescription || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Išsamus aprašymas:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.wish[i].longDescription || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Terminas:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.wish[i].date || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Nuoroda:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.wish[i].url || '-' }}</p>
+    </div>
+    <div class="col-lg-4">
+      <p class="black-text1">Failas:</p>
+    </div>
+    <div class="col-lg-8">
+      <p class="black-text2">{{ model.wish[i].image || '-' }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="blue-text1"><b>Papildomi komentarai</b></h1>
+    <p class="black-text2">{{ model.comments || '-' }}</p>
+  </div>
 </div>

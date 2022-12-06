@@ -16,21 +16,31 @@ html, body {
 }
 
 @font-face {
+  font-family: "OpenSans-Bold";
+  src: url("./assets/fonts/opensans/OpenSans-Bold.ttf");
+}
+
+@font-face {
   font-family: "Montserrat";
   src: url("./assets/fonts/montserrat/Montserrat-Regular.ttf");
 }
 
-
-body { margin: 0; font-family: "Montserrat", "Helvetica Neue", sans-serif; }
-
-
-.Opensans {
-  font-family: OpenSans;
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./assets/fonts/montserrat/Montserrat-Bold.ttf");
 }
 
-.Montserrat {
-  font-family: Montserrat;
-}
+
+body { margin: 0; font-family: "Montserrat", "OpenSans", "OpenSans-Bold", "Montserrat-Bold"; }
+
+
+// .Opensans {
+//   font-family: OpenSans;
+// }
+
+// .Montserrat {
+//   font-family: Montserrat;
+// }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Montserrat", "OpenSans", "OpenSans-Bold", "Montserrat-Bold"; }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForwardComponent } from './forward.component';
+import { WishesFormComponent } from './wishes-form.component';
 
-describe('ForwardComponent', () => {
-  let component: ForwardComponent;
-  let fixture: ComponentFixture<ForwardComponent>;
+describe('WishesFormComponent', () => {
+  let component: WishesFormComponent;
+  let fixture: ComponentFixture<WishesFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForwardComponent ]
+      declarations: [ WishesFormComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ForwardComponent);
+    fixture = TestBed.createComponent(WishesFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,72 +1,107 @@
 .page-background {
   background-image: url("/assets/images/background.png");
   height: 100vh;
-  background-repeat: no-repeat;
   background-size: full;
   width: 100%;
-  background-color: #f8f8f8;
   padding-top: 74px;
-
+  overflow: scroll;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
   .logo {
     text-align: center;
     padding-bottom: 48px;
   }
-
-  .container {
+  .container.form {
     box-shadow: 0px 3px 6px #00000029;
     opacity: 1;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     margin: auto;
-    width: 50%;
-    padding-bottom: 32px;
+    width: 40%;
+    .btn-primary {
+      --bs-btn-bg: #ffffff;
+      color: #1c4872;
+      border-width: 1px;
+      border-color: #1c4872;
+      border-radius: 0px;
+      font-family: "OpenSans";
+      font-size: 12px;
+      width: 50%;
+      letter-spacing: 1.31px;
+      height: 50px;
+      --bs-btn-hover-bg: #828282;
+      .chevron-left-icon {
+        color: #ebf0f3;
+        height: 10px;
+      }
+    }
+    .btn-secondary {
+      --bs-btn-bg: #1c4872;
+      font-family: "OpenSans";
+      font-size: 12px;
+      border-width: 1px;
+      border-color: #1c4872;
+      border-radius: 0px;
+      width: 50%;
+      letter-spacing: 1.31px;
+      height: 50px;
+      .chevron-right-icon {
+        color: #ebf0f3;
+        height: 10px;
+      }
+    }
+  }
+}
 
-
-    .col-sm {
-      text-align: center;
-      padding-top: 30px;
-
+@media screen and (max-width: 950px) {
+  .page-background {
+    background-image: url("/assets/images/background.png");
+    height: 100vh;
+    background-size: full;
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 20px;
+    overflow: scroll;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+    .logo {
+      padding-bottom: 25px;
+    }
+    .container.form {
+      box-shadow: 0px 3px 6px #00000029;
+      opacity: 1;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      margin: auto;
+      width: 90%;
+      padding-top: 20px;
       .btn-primary {
-        --bs-btn-bg: white;
+        --bs-btn-bg: #ffffff;
         color: #1c4872;
         border-width: 1px;
         border-color: #1c4872;
         border-radius: 0px;
-        font: 12px "OpenSans";
+        font-family: "OpenSans";
+        font-size: 12px;
         width: 50%;
         letter-spacing: 1.31px;
         height: 50px;
-
-        .chevron-left-icon1 {
-          color: #ebf0f3;
-          height: 15px;
-        }
-
-        .chevron-left-icon2 {
-          color: #ebf0f3;
-          margin-left: -10px;
-          height: 15px;
+        .chevron-left-icon {
+          height: 10px;
         }
       }
-
       .btn-secondary {
         --bs-btn-bg: #1c4872;
-        font: 12px "OpenSans";
+        font-family: "OpenSans";
+        font-size: 12px;
         border-width: 1px;
         border-color: #1c4872;
         border-radius: 0px;
         width: 50%;
         letter-spacing: 1.31px;
         height: 50px;
-
-        .chevron-right-icon1 {
-          color: #ebf0f3;
-          height: 15px;
-        }
-
-        .chevron-right-icon2 {
-          color: #ebf0f3;
-          margin-left: -10px;
-          height: 15px;
+        .chevron-right-icon {
+          height: 10px;
         }
       }
     }

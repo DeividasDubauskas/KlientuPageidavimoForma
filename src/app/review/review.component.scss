@@ -1,0 +1,83 @@
+.section {
+  .row {
+    .blue-text {
+      color: #1c4872;
+      font-size: 24px;
+      font-family: 'Montserrat-Bold';
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+    .black-text {
+      color: black;
+      font-family: 'OpenSans';
+      text-align: center;
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    .blue-text1 {
+      color: #1c4872;
+      font-size: 20px;
+      font-family: 'Montserrat-Bold';
+    }
+    .black-text1 {
+      color: black;
+      font-family: 'OpenSans-Bold';
+      font-size: 14px;
+      font-weight: bold;
+      text-align: right;
+    }
+    .black-text2 {
+      color: black;
+      font-family: 'OpenSans';
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .section {
+    text-align: center;
+    .row {
+      margin: auto;
+      padding-bottom: 20px;
+      .blue-text {
+        color: #1c4872;
+        font-size: 17px;
+        font-family: 'Montserrat-Bold';
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+      }
+      .black-text {
+        color: black;
+        font-family: 'OpenSans';
+        text-align: center;
+        font-size: 10px;
+        padding-bottom: 10px;
+      }
+      .blue-text1 {
+        color: #1c4872;
+        font-size: 17px;
+        font-family: 'Montserrat-Bold';
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .black-text1 {
+        color: black;
+        font-family: 'OpenSans-Bold';
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .black-text2 {
+        color: black;
+        font-family: 'OpenSans';
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+}

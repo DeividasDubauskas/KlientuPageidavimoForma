@@ -2,11 +2,11 @@
   background-image: url("/assets/images/background.png");
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: full;
+  background-size: cover;
   width: 100%;
   padding-top: 141px;
   overflow: scroll;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: contain;
   background-position: center;
   .intro {
@@ -18,36 +18,23 @@
     margin: auto;
     .col-sm {
       text-align: center;
-      padding-top: 62px;
-      padding-bottom: 30px;
+      padding-top: 50px;
+      padding-bottom: 40px;
     }
     .blue-text {
       color: #1c4872;
       font-size: 24px;
       font-family: 'Montserrat-Bold';
       text-align: center;
-      padding-bottom: 14px;
-      padding-top: 31px;
+      padding-bottom: 15px;
+      padding-top: 40px;
     }
     .black-text {
       color: #000000;
       font-family: 'OpenSans';
       text-align: center;
       font-size: 14px;
-      padding-bottom: 41px;
-    }
-    .col-sm {
-      padding-top: 20px;
-      text-align: center;
-    }
-    .image-container {
-      padding-bottom: 30px;
-      margin: auto;
-      text-align: center;
-      .image{
-        width: 80%;
-        height: 80%;
-      }
+      padding-bottom: 25px;
     }
     .button {
       margin: auto;
@@ -69,8 +56,6 @@
   .page-background {
     background-image: url("/assets/images/background.png");
     height: 100vh;
-    background-repeat: no-repeat;
-    background-size: full;
     width: 100%;
     background-color: #f8f8f8;
     padding-top: 40px;
@@ -85,9 +70,10 @@
       opacity: 1;
       background: #ffffff 0% 0% no-repeat padding-box;
       margin: auto;
+      text-align: center;
       .col-sm {
         text-align: center;
-        padding-top: 62px;
+        padding-top: 20px;
         padding-bottom: 30px;
       }
       .blue-text {
@@ -95,28 +81,15 @@
         font-size: 17px;
         font-family: 'Montserrat-Bold';
         text-align: center;
-        padding-bottom: 14px;
-        padding-top: 31px;
+        padding-bottom: 15px;
+        padding-top: 30px;
       }
       .black-text {
         color: #000000;
         font-family: 'OpenSans';
         text-align: center;
-        font-size: 10px;
-        padding-bottom: 41px;
-      }
-      .col-sm {
-        padding-top: 20px;
-        text-align: center;
-      }
-      .image-container {
-        padding-bottom: 30px;
-        margin: auto;
-        text-align: center;
-        .image{
-          width: 100%;
-          height: 100%;
-        }
+        font-size: 14px;
+        padding-bottom: 25px;
       }
       .button {
         margin: auto;

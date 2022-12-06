@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BugRegistrar } from './models/bug-registrar.model';
+import { CommentsComponent } from '../comments/comments.component';
+import { ContactInformationComponent } from '../contact-information/contact-information.component';
 import { BugRegistrarService } from './service/bug-registrar.service';
 
 @Component({
@@ -9,11 +10,16 @@ import { BugRegistrarService } from './service/bug-registrar.service';
 })
 export class NavBarComponent implements OnInit{
 
-  constructor() { }
-  ngOnInit(): void {
+  constructor(private contactSubmit: ContactInformationComponent, private bugService: BugRegistrarService, private commentSubmit: CommentsComponent) { }
+  ngOnInit(): void {}
 
+  ContactSubmit() {
+    this.contactSubmit.onSubmit();
+    this.bugService.updateCurrentForm();
   }
 
-
-
+  CommentsSubmit() {
+    this.commentSubmit.onSubmit();
+    this.bugService.updateCurrentForm();
+  }
 }
